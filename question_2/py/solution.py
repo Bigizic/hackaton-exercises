@@ -5,7 +5,7 @@
 
 def bacterial_dna(n: int, dna_strings: str):
     """
-    bacterial_dna: - function that
+    bacterial_dna: - function that solves the dna bacteria problem
     @params:
         - n: number of test cases {int}
         - dna_strings: 2 dna strings seperated by a space {str}
