@@ -1,0 +1,26 @@
+A Vagina number is a three-digit number where the last digit is a product of the first and second digit
+
+e.g 122,100,224 are Vagina numbers, while 287,473,112 are not Vagina numbers
+
+You're given a three digit number N, find the smallest Vagina number that is greater than or equal to N. It always exists under the constraints.
+
+Constraints
+100≤N≤919
+N is positive
+
+Sample Input 01
+320
+Sample Output 01
+326
+
+
+Sample Input 02
+144
+Sample Output 02
+144
+
+
+Sample Input 03
+516
+Sample Output 03
+600
