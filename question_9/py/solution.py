@@ -28,6 +28,11 @@ def main(N: int, first_check: bool = None, second_check: bool = None,
     """Entry point to solution
     params:
         - N: <int> input
+        - first_check: <bool> first reference to when a vagina number exists
+        - second_check: <bool> second reference to when a vagina number exists
+        - count: <int> counter to check if a vagina number has been found
+                 only increments if a vagina number has been found
+        - res: <int> output result
 
     Return:
         - Following the Constraints 100≤N≤919 returns the smallest vagina
