@@ -54,6 +54,7 @@ def main(N: int, first_check: bool = None, second_check: bool = None,
 
 
 print(main(320))
+print(main(144))
 print(main(516))
 print(main(122))
 print(main(100))
