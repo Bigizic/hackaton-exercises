@@ -50,6 +50,7 @@ def main(N: int, first_check: bool = None, second_check: bool = None,
         if vagina_number_checker(N):
             # first check if N is vagina equals true
             return main(N + 1, True, None, count + 1, N)
+    return False
 
 
 print(main(320))
