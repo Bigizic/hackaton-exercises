@@ -16,3 +16,4 @@ Return:
 def murder_in_the_village(n: int, names: str):
     """Implementation
     """
+    pass
