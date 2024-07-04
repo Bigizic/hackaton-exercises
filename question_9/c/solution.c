@@ -28,7 +28,7 @@ bool vagina_number_checker(int number, char *first, char *second) {
 
 
 /**
-* main - entry point
+* vagina_main - entry point
 *
 * @N: <int> input number to find the smallest
 * @first_check: <bool>
@@ -38,22 +38,30 @@ bool vagina_number_checker(int number, char *first, char *second) {
 *
 * Return:
  */
-int main(int N, bool first_check, bool second_check,
+int vagina_main(int N, bool first_check, bool second_check,
          int count, int result)
 {
     if (100 <= N && N <= 919) {
         if (first_check && second_check) {
             return result;
-        }
+        };
 
         if (!vagina_number_checker(N, NULL, NULL) && count == 0) {
             return main(N + 1, NULL, NULL, count, result);
-        }
+        };
 
         if (!vagina_number_checker(N, NULL, NULL) && count > 0) {
-            
-        }
-    }
+            return main(N + 1, first_check, NULL, count, result);
+        };
+
+        if (vagina_number_checker(N, NULL, NULL) && count > 0) {
+            return main(N + 1, true, true, count + 1, result);
+        };
+
+        if (vagina_number_checker(N, NULL, NULL)) {
+            return main(N + 1, true, NULL, count + 1, N);
+        };
+    };
     return 0;
 }
 
