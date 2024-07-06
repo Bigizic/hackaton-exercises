@@ -20,7 +20,8 @@ bool vagina_number_checker(int number, char *first, char *second) {
     if (length != 3) {
         return false;
     };
-    char *f = &str[0], *s = &str[1], *last = &str[2];
+    char f[2] = { str[0], '\0' }, s[2] = { str[1], '\0' };
+    char last[2] = { str[2], '\0' };
 
     if (first && second) {
         return atoi(first) * atoi(second) == atoi(last) ? true : false;
@@ -45,7 +46,7 @@ int vagina_main(int N, bool first_check, bool second_check,
 {
     if (100 <= N && N <= 919) {
         if (first_check && second_check) {
-            printf("%d\n", result);
+            // printf("%d\n", N);
             return result;
         };
 
@@ -65,8 +66,9 @@ int vagina_main(int N, bool first_check, bool second_check,
             return vagina_main(N + 1, true, NULL, count + 1, N);
         };
     };
-    // return 0;
+    return 0;
 }
+
 
 /**
 * main - entry point
@@ -74,14 +76,11 @@ int vagina_main(int N, bool first_check, bool second_check,
 * Return: 0
  */
 int main(void) {
-    int numbers[5] = {320, 144, 516, 122, 100};
-    int *lis = malloc(30 * sizeof(int));
-    int num;
+    int numbers[] = {320, 144, 516, 122, 100};
 
-    for (int i = 0; i < sizeof(numbers); i++) {
-        num = vagina_main(numbers[i], NULL, NULL, '\0', '\0');
-        lis[i] = num;
+    for (int i = 0; i < sizeof(numbers) / sizeof(numbers[0]); i++) {
+        printf("%d\n", vagina_main(numbers[i], NULL, NULL, '\0', '\0'));
     };
-    return lis;
+    return 0;
 }
 
