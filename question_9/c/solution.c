@@ -75,10 +75,13 @@ int vagina_main(int N, bool first_check, bool second_check,
  */
 int main(void) {
     int numbers[5] = {320, 144, 516, 122, 100};
+    int *lis = malloc(30 * sizeof(int));
+    int num;
 
     for (int i = 0; i < sizeof(numbers); i++) {
-        printf("%d\n", vagina_main(numbers[i], NULL, NULL, '\0', '\0'));
+        num = vagina_main(numbers[i], NULL, NULL, '\0', '\0');
+        lis[i] = num;
     };
-    // return 0;
+    return lis;
 }
 
