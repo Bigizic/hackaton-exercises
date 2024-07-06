@@ -45,6 +45,7 @@ int vagina_main(int N, bool first_check, bool second_check,
 {
     if (100 <= N && N <= 919) {
         if (first_check && second_check) {
+            printf("%d\n", result);
             return result;
         };
 
@@ -64,7 +65,7 @@ int vagina_main(int N, bool first_check, bool second_check,
             return vagina_main(N + 1, true, NULL, count + 1, N);
         };
     };
-    return 0;
+    // return 0;
 }
 
 /**
@@ -78,6 +79,6 @@ int main(void) {
     for (int i = 0; i < sizeof(numbers); i++) {
         printf("%d\n", vagina_main(numbers[i], NULL, NULL, '\0', '\0'));
     };
-    return 0;
+    // return 0;
 }
 
