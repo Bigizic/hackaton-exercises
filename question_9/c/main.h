@@ -9,7 +9,7 @@
 #include <unistd.h>
 
 /* functions */
-bool vagina_number_checker(int number, char *first, char *second);
+bool vagina_number_checker(int number, const char *first, const char *second);
 int vagina_main(int N, bool first_check, bool second_check, int count, int result);
 
 #endif

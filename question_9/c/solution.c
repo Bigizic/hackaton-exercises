@@ -11,7 +11,7 @@
 *
 * Return: True if number is valid vagina number otherwise False
 */
-bool vagina_number_checker(int number, char *first, char *second)
+bool vagina_number_checker(int number, const char *first, const char *second)
 {
 	char str[4];
 
@@ -38,10 +38,10 @@ bool vagina_number_checker(int number, char *first, char *second)
 * vagina_main - entry point
 *
 * @N: <int> input number to find the smallest
-* @first_check: <bool>
-* @second_check: <bool>
-* @count: <int>
-* @result: <int>
+* @first_check: <bool> first reference to when a vagina number exits
+* @second_check: <bool> second reference to when a vagina number exists
+* @count: <int> counter once a vagina number has been found
+* @result: <int> output
 *
 * Return: smallest vagina number that is greater than or equal to N
  */
@@ -90,7 +90,7 @@ int main(void)
 
 	for (int i = 0; i < sizeof(numbers) / sizeof(numbers[0]); i++)
 	{
-		printf("%d\n", vagina_main(numbers[i], NULL, NULL, '\0', '\0'))
+		printf("%d\n", vagina_main(numbers[i], NULL, NULL, '\0', '\0'));
 	};
 	return (0);
 }
