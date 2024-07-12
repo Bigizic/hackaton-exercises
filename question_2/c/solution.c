@@ -67,7 +67,7 @@ int bacterial_dna(int n, char *dna_strings)
 {
 	int count = 0;
 	char sample_dna, reference_dna;
-    int token_count;
+	int token_count;
 	if (n >= 1 && n <= 100) {
 		// continue
         char **dna = split(dna_strings, " ", &token_count);
